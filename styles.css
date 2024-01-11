@@ -1,0 +1,112 @@
+:root {
+  --primary-color: #5215f7;
+  --main-padding: 0em;
+  --margin-top-small: 10px;
+  --margin-top-medium: 20px;
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url(../assets/fonts/Lato-Light.ttf);
+}
+
+body {
+  font-family: "Lato-Light", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--main-padding);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lato-Black";
+}
+
+hr {
+  margin-bottom: 3em;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--main-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+#left-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+#dept-logo {
+  /* Add styling for DEPT® logo */
+}
+
+#left-content {
+  text-align: center;
+}
+
+#read-more-btn {
+  margin-top: var(--margin-top-small);
+}
+
+#forecast-block {
+  padding: 2em;
+}
+
+#newsletter-form {
+  margin-top: var(--margin-top-medium);
+  text-align: center;
+  margin-bottom: 7em;
+}
+
+#right-part {
+  margin-top: var(--margin-top-medium);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#weather-info-block {
+  /* Add styling for the weather info block */
+}
+
+#activities-block {
+  display: flex;
+  flex-direction: column;
+}
+
+#suitable-activities,
+#unsuitable-activities {
+  margin-top: var(--margin-top-small);
+}
+
+.modal {
+  display: none;
+  /* Add styling for the modal */
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--main-padding);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.logo {
+  height: 3em;
+}
