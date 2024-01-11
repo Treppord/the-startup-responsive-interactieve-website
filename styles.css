@@ -6,8 +6,9 @@
 }
 
 @font-face {
-  font-family: "Lato-Light";
-  src: url(../assets/fonts/Lato-Light.ttf);
+  font-family: "Lato";
+  src: url(../assets/fonts/Lato-Light.ttf) format("truetype"),
+    /* Light variant */ url(../assets/fonts/Lato-Black.ttf) format("truetype"); /* Bold variant */
 }
 
 body {
@@ -28,7 +29,7 @@ header {
 h1,
 h2,
 h3 {
-  font-family: "Lato-Black";
+  font-weight: bold;
 }
 
 hr {
