@@ -22,6 +22,7 @@ header {
   color: white;
   text-align: center;
   padding: var(--main-padding);
+  grid-area: header;
 }
 
 h1,
@@ -38,8 +39,10 @@ main {
   max-width: 1440px;
   margin: 0 auto;
   padding: var(--main-padding);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "lp rp";
 }
 
 #left-part {
@@ -47,6 +50,8 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
+  padding: 1em;
+  grid-area: lp;
 }
 
 #dept-logo {
@@ -76,6 +81,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  grid-area: rp;
 }
 
 #weather-info-block {
@@ -90,6 +96,10 @@ main {
 #suitable-activities,
 #unsuitable-activities {
   margin-top: var(--margin-top-small);
+}
+
+#description-paragraph2 {
+  padding-bottom: 2em;
 }
 
 .modal {
