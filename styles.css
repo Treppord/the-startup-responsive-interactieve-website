@@ -19,7 +19,9 @@ body {
   color: #000000;
 }
 
-img {
+img,
+p,
+li {
   margin-left: 2em;
 }
 
@@ -28,10 +30,6 @@ h2,
 h3 {
   font-family: "Lato-Regular", sans-serif;
   margin: 1em;
-}
-
-p {
-  margin: 2em;
 }
 
 .grid-container {
@@ -78,6 +76,11 @@ p {
 .city-weather h3 {
   margin-right: 10px;
 }
+/* Add this to set the size of the condition icons */
+.condition-icon {
+  width: 1em;
+  height: 1em;
+}
 
 button {
   margin: 5px;
@@ -115,6 +118,69 @@ button {
   right: 10px;
   font-size: 20px;
   cursor: pointer;
+}
+
+/* Add styles for Section C */
+.today-temperature {
+  padding: 10px;
+  background-color: #f0ebfe;
+  max-width: 50%;
+}
+
+.today-temperature p {
+  margin: 0;
+}
+
+.today-activities,
+.not-today-activities {
+  padding: 10px;
+}
+
+/* Add styles for the activity lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Add this line for a bottom border */
+}
+
+.highlyrec {
+  font-family: "Lato-Black", sans-serif;
+  color: rgb(39, 222, 39);
+}
+
+.rec {
+  font-family: "Lato-Black", sans-serif;
+  color: green;
+}
+
+.notrec {
+  font-family: "Lato-Black", sans-serif;
+  color: rgb(178, 110, 0);
+}
+
+.dangerous {
+  font-family: "Lato-Black", sans-serif;
+  color: rgb(130, 11, 11);
+}
+
+.img-act {
+  max-width: 50px; /* Adjust the size as needed */
+  margin-right: 10px;
+}
+
+.activity-details {
+  max-width: calc(100% - 60px);
 }
 
 /* Media Query for screens below 700px */
