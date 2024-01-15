@@ -1,123 +1,199 @@
-:root {
-  --primary-color: #5215f7;
-  --main-padding: 0em;
-  --margin-top-small: 10px;
-  --margin-top-medium: 20px;
+@font-face {
+  font-family: "Lato-Light";
+  src: url("./assets/fonts/Lato-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Lato";
-  src: url(../assets/fonts/Lato-Light.ttf) format("truetype"),
-    /* Light variant */ url(../assets/fonts/Lato-Black.ttf) format("truetype"); /* Bold variant */
+  font-family: "Lato-Black";
+  src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
 }
 
 body {
   font-family: "Lato-Light", sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  color: #000000;
 }
 
-header {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: var(--main-padding);
-  grid-area: header;
+img,
+p,
+li {
+  margin-left: 2em;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: bold;
+  font-family: "Lato-Regular", sans-serif;
+  margin: 1em;
 }
 
-hr {
-  margin-bottom: 3em;
-}
-
-main {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: var(--main-padding);
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "lp rp";
+  grid-template-columns: repeat(2, 1fr);
 }
 
-#left-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section {
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-a {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: #5215f7;
+  color: white;
+}
+
+.section-b {
+  grid-area: 2 / 1 / 3 / 2;
   background-color: #f2f2f2;
-  padding: 1em;
-  grid-area: lp;
 }
 
-#dept-logo {
-  /* Add styling for DEPT® logo */
+.section-c {
+  grid-area: 1 / 2 / 3 / 3;
+  background-color: #ffffff;
 }
 
-#left-content {
-  text-align: center;
-}
-
-#read-more-btn {
-  margin-top: var(--margin-top-small);
-}
-
-#forecast-block {
-  padding: 2em;
-}
-
-#newsletter-form {
-  margin-top: var(--margin-top-medium);
-  text-align: center;
-  margin-bottom: 7em;
-}
-
-#right-part {
-  margin-top: var(--margin-top-medium);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  grid-area: rp;
-}
-
-#weather-info-block {
-  /* Add styling for the weather info block */
-}
-
-#activities-block {
+.weather-forecast {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-#suitable-activities,
-#unsuitable-activities {
-  margin-top: var(--margin-top-small);
+.city-weather {
+  width: 100%; /* Make each city-weather element take up the full width */
+  padding: 5px;
+  display: flex; /* Add this line to enable flex display */
+  justify-content: space-between; /* Add this line to separate date and weather */
+  align-items: center; /* Add this line for vertical centering */
+  border-bottom: 1px solid #ccc; /* Add this line for a bottom border */
 }
 
-#description-paragraph2 {
-  padding-bottom: 2em;
+/* Add this line to ensure proper spacing */
+.city-weather h3 {
+  margin-right: 10px;
+}
+/* Add this to set the size of the condition icons */
+.condition-icon {
+  width: 1em;
+  height: 1em;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #5215f7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .modal {
   display: none;
-  /* Add styling for the modal */
-}
-
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: var(--main-padding);
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.logo {
-  height: 3em;
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Add styles for Section C */
+.today-temperature {
+  padding: 10px;
+  background-color: #f0ebfe;
+  max-width: 50%;
+}
+
+.today-temperature p {
+  margin: 0;
+}
+
+.today-activities,
+.not-today-activities {
+  padding: 10px;
+}
+
+/* Add styles for the activity lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Add this line for a bottom border */
+}
+
+.highlyrec {
+  font-family: "Lato-Black", sans-serif;
+  color: rgb(39, 222, 39);
+}
+
+.rec {
+  font-family: "Lato-Black", sans-serif;
+  color: green;
+}
+
+.notrec {
+  font-family: "Lato-Black", sans-serif;
+  color: rgb(178, 110, 0);
+}
+
+.dangerous {
+  font-family: "Lato-Black", sans-serif;
+  color: rgb(130, 11, 11);
+}
+
+.img-act {
+  max-width: 50px; /* Adjust the size as needed */
+  margin-right: 10px;
+}
+
+.activity-details {
+  max-width: calc(100% - 60px);
+}
+
+/* Media Query for screens below 700px */
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+  }
+
+  .section {
+    grid-area: auto; /* Reset grid areas */
+  }
+
+  .section-c {
+    background-color: #ffffff; /* Adjust background color if needed */
+  }
 }
