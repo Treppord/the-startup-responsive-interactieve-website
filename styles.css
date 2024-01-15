@@ -1,123 +1,37 @@
-:root {
-  --primary-color: #5215f7;
-  --main-padding: 0em;
-  --margin-top-small: 10px;
-  --margin-top-medium: 20px;
-}
-
-@font-face {
-  font-family: "Lato";
-  src: url(../assets/fonts/Lato-Light.ttf) format("truetype"),
-    /* Light variant */ url(../assets/fonts/Lato-Black.ttf) format("truetype"); /* Bold variant */
-}
-
 body {
-  font-family: "Lato-Light", sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
   box-sizing: border-box;
-}
-
-header {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: var(--main-padding);
-  grid-area: header;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: bold;
-}
-
-hr {
-  margin-bottom: 3em;
-}
-
-main {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: var(--main-padding);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "lp rp";
-}
-
-#left-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 1em;
-  grid-area: lp;
-}
-
-#dept-logo {
-  /* Add styling for DEPT® logo */
-}
-
-#left-content {
+  width: 50%;
+  padding: 20px;
   text-align: center;
 }
 
-#read-more-btn {
-  margin-top: var(--margin-top-small);
+.section1 {
+  background-color: #3498db;
+  color: #fff;
 }
 
-#forecast-block {
-  padding: 2em;
+.section2 {
+  background-color: #2ecc71;
+  color: #fff;
 }
 
-#newsletter-form {
-  margin-top: var(--margin-top-medium);
-  text-align: center;
-  margin-bottom: 7em;
+.section3 {
+  background-color: #e74c3c;
+  color: #fff;
 }
 
-#right-part {
-  margin-top: var(--margin-top-medium);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  grid-area: rp;
-}
-
-#weather-info-block {
-  /* Add styling for the weather info block */
-}
-
-#activities-block {
-  display: flex;
-  flex-direction: column;
-}
-
-#suitable-activities,
-#unsuitable-activities {
-  margin-top: var(--margin-top-small);
-}
-
-#description-paragraph2 {
-  padding-bottom: 2em;
-}
-
-.modal {
-  display: none;
-  /* Add styling for the modal */
-}
-
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: var(--main-padding);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.logo {
-  height: 3em;
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
 }
