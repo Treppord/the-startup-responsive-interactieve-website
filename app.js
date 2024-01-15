@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
       temperature: "-20°",
       condition: "🌨️",
     },
+    {
+      name: "Friday 5th Jan",
+      mintemperature: "-12°",
+      temperature: "-10°",
+      condition: "🌨️",
+    },
   ];
 
   const weatherContent = document.getElementById("forecast-block");
@@ -33,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cityWeatherElement.classList.add("city-weather");
 
     cityWeatherElement.innerHTML = `
-      <h3>${city.name}</h3> <p>${city.mintemperature} / ${city.temperature} ${city.condition}</p>
+      <h3>${city.name}</h3><p>${city.mintemperature} / ${city.temperature} ${city.condition}</p>
     `;
 
     weatherContent.appendChild(cityWeatherElement);
