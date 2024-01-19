@@ -15,26 +15,28 @@
     <div class="grid-container">
       <div class="section section-a">
         <img src="assets/svg/dept.svg" class="logo" />
-        <h1>DEPT ® Weather Planner</h1>
-        <p>
-          Picture this: an application that doesn't just tell you the weather,
-          but also helps you plan your activities around it. Imagine knowing
-          exactly the perfect day to plan that hike, or when to avoid the
-          outdoor concert due to an unexpected shower. That's exactly what the
-          Dept Weather Planner offers you.
-        </p>
-        <br />
-        <p>
-          Built with cutting-edge technologies, our weather planner brings you
-          accurate, real-time weather data with a slick and user-friendly
-          interface. But it's not just a weather app; it's an intuitive daily
-          planner that syncs with the weather. With a range of activities to
-          choose from, it suggests the best options based on current and
-          forecasted weather conditions.
-        </p>
+        <div class="content-a">
+          <h1>DEPT ® Weather Planner</h1>
+          <p>
+            Picture this: an application that doesn't just tell you the weather,
+            but also helps you plan your activities around it. Imagine knowing
+            exactly the perfect day to plan that hike, or when to avoid the
+            outdoor concert due to an unexpected shower. That's exactly what the
+            Dept Weather Planner offers you.
+          </p>
+          <br />
+          <p>
+            Built with cutting-edge technologies, our weather planner brings you
+            accurate, real-time weather data with a slick and user-friendly
+            interface. But it's not just a weather app; it's an intuitive daily
+            planner that syncs with the weather. With a range of activities to
+            choose from, it suggests the best options based on current and
+            forecasted weather conditions.
+          </p>
+        </div>
       </div>
       <div class="section section-b">
-        <h3>Coming 5 Days</h3>
+        <div class="title-b">Upcoming 5 Days</div>
         <div id="forecast-block" class="weather-forecast">
           <!-- JavaScript will populate this section -->
         </div>
@@ -89,6 +91,15 @@
         </div>
       </div>
     </div>
+    <div class="modal" id="activityModal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>Activity</h3>
+        <p>Yusu</p>
+        <!-- Add any additional content or styling for the popup here -->
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

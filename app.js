@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Monday 1st Jan",
       mintemperature: "18°",
       temperature: "21°",
-      condition: "sun", // Use a keyword to represent the condition
+      condition: "sun",
     },
     {
       name: "Tuesday 2nd Jan",
@@ -41,13 +41,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const conditionIcon = getConditionIcon(city.condition);
 
     cityWeatherElement.innerHTML = `
-      <h3>${city.name}</h3>
+      <h4>${city.name}</h4>
       <p>${city.mintemperature} / ${city.temperature} ${conditionIcon}</p>
     `;
 
     weatherContent.appendChild(cityWeatherElement);
   });
+
+  const activityElements = document.querySelectorAll(".activity");
+  activityElements.forEach((activity) => {
+    activity.addEventListener("click", () => {
+      openModal();
+    });
+  });
 });
+
+function openModal() {
+  const modal = document.getElementById("activityModal");
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("activityModal");
+  modal.style.display = "none";
+}
 
 function getConditionIcon(condition) {
   let iconSrc = "";
