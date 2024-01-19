@@ -158,6 +158,7 @@ ul li {
   margin-bottom: 1em;
   padding: 10px;
   border-bottom: 1px solid #ccc; /* Add this line for a bottom border */
+  cursor: pointer; /* Change the cursor to a hand */
 }
 
 .highlyrec {
