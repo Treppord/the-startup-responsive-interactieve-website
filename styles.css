@@ -1,22 +1,38 @@
+:root {
+  --primary-color: #5215f7;
+  --secondary-color: #f2f2f2;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --modal-background: rgba(255, 255, 255, 0.7);
+  --font-family-light: "Lato-Light", sans-serif;
+  --font-family-regular: "Lato-Regular", sans-serif;
+  --font-family-black: "Lato-Black", sans-serif;
+  --font-color-green: rgb(39, 222, 39);
+  --font-color-normal: green;
+  --font-color-warning: rgb(178, 110, 0);
+  --font-color-dangerous: rgb(130, 11, 11);
+}
+
 @font-face {
-  font-family: "Lato-Light";
+  font-family: var(--font-family-light);
   src: url("./assets/fonts/Lato-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Lato-Black";
+  font-family: var(--font-family-black);
   src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Lato-Regular";
+  font-family: var(--font-family-regular);
   src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
 }
 
 body {
-  font-family: "Lato-Light", sans-serif;
+  font-family: var(--font-family-light);
   margin: 0;
-  color: #000000;
+  color: var(--text-color);
 }
 
 img,
@@ -28,7 +44,7 @@ li {
 h1,
 h2,
 h3 {
-  font-family: "Lato-Regular", sans-serif;
+  font-family: var(--font-family-regular), sans-serif;
   margin: 1em;
 }
 
@@ -39,12 +55,12 @@ h3 {
 
 .section {
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .section-a {
   grid-area: 1 / 1 / 2 / 2;
-  background-color: #5215f7;
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -55,12 +71,12 @@ h3 {
 
 .section-b {
   grid-area: 2 / 1 / 3 / 2;
-  background-color: #f2f2f2;
+  background-color: var(--secondary-color);
 }
 
 .section-c {
   grid-area: 1 / 2 / 3 / 3;
-  background-color: #ffffff;
+  background-color: var(--background-color);
 }
 
 .weather-forecast {
@@ -69,19 +85,18 @@ h3 {
 }
 
 .city-weather {
-  width: 100%; /* Make each city-weather element take up the full width */
+  width: 100%;
   padding: 5px;
-  display: flex; /* Add this line to enable flex display */
-  justify-content: space-between; /* Add this line to separate date and weather */
-  align-items: center; /* Add this line for vertical centering */
-  border-bottom: 1px solid #ccc; /* Add this line for a bottom border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
-/* Add this line to ensure proper spacing */
 .city-weather h3 {
   margin-right: 10px;
 }
-/* Add this to set the size of the condition icons */
+
 .condition-icon {
   width: 1em;
   height: 1em;
@@ -90,14 +105,13 @@ h3 {
 button {
   margin: 5px;
   padding: 10px;
-  background-color: #5215f7;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Add styles for the modal */
 .modal {
   display: none;
   position: fixed;
@@ -105,7 +119,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* White with some transparency */
+  background-color: var(--modal-background);
 }
 
 .modal-content {
@@ -113,7 +127,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 50px;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -126,7 +140,6 @@ button {
   cursor: pointer;
 }
 
-/* Add styles for Section C */
 .today-temperature {
   padding: 10px;
   background-color: #f0ebfe;
@@ -142,7 +155,6 @@ button {
   padding: 10px;
 }
 
-/* Add styles for the activity lists */
 ul {
   list-style: none;
   padding: 0;
@@ -157,32 +169,32 @@ ul li {
   align-items: center;
   margin-bottom: 1em;
   padding: 10px;
-  border-bottom: 1px solid #ccc; /* Add this line for a bottom border */
-  cursor: pointer; /* Change the cursor to a hand */
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
 }
 
 .highlyrec {
-  font-family: "Lato-Black", sans-serif;
-  color: rgb(39, 222, 39);
+  font-family: var(--font-family-black);
+  color: var(--font-color-green);
 }
 
 .rec {
-  font-family: "Lato-Black", sans-serif;
-  color: green;
+  font-family: var(--font-family-black);
+  color: var(--font-color-normal);
 }
 
 .notrec {
-  font-family: "Lato-Black", sans-serif;
-  color: rgb(178, 110, 0);
+  font-family: var(--font-family-black);
+  color: var(--font-color-warning);
 }
 
 .dangerous {
-  font-family: "Lato-Black", sans-serif;
-  color: rgb(130, 11, 11);
+  font-family: var(--font-family-black);
+  color: var(--font-color-dangerous);
 }
 
 .img-act {
-  max-width: 50px; /* Adjust the size as needed */
+  max-width: 50px;
   margin-right: 10px;
 }
 
@@ -190,21 +202,31 @@ ul li {
   max-width: calc(100% - 60px);
 }
 
-/* Media Query for screens below 700px */
 @media (max-width: 700px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
+    grid-template-columns: 1fr;
   }
 
   .section {
-    grid-area: auto; /* Reset grid areas */
+    grid-area: auto;
   }
 
   .section-c {
-    background-color: #ffffff; /* Adjust background color if needed */
+    background-color: var(--background-color);
   }
+
   .content-a {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
   }
 }
